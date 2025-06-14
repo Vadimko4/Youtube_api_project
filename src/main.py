@@ -1,3 +1,12 @@
+import os
+from utils import get_youtube_data, create_database
 
 
-print('11111')
+if __name__ == '__main__':
+    api_key = os.getenv('YT_API_KEY')
+    channel_ids = [
+        'UC-OVMPlMA3-YCIeg4z5z23A',  # moscowpython
+        'UCwHL6WHUarjGfUM_586me8w',  # highload
+    ]
+    data = get_youtube_data(api_key, channel_ids)
+    create_database('youtube', params)
